@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <style>
+        #loading, #results{
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center mt-5">
+                    <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+                    <form id="loan-form">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" class="form-control" id="amount" placeholder="Loan Amount">   
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">%</span>
+                                <input type="number" class="form-control" id="interest" placeholder="Interest">   
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="years" placeholder="Years to Repay">
+                        </div>
+                        <div class="input-group">
+                            <input type="submit" value="Calculate" class="btn btn-dark btn-block">
+                        </div>
+                    </form>
+                    <!-- Loader Here -->
+                    <div id="loading">
+                        <img src="img/loading2.gif" class="img-fluid" alt="loading icon">
+                    </div>
+                    <!-- Results -->
+                    <div id="results" class="pt-4">
+                        <h5>Results</h5>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">Monthly Payment</span>
+                                <input type="number" class="form-control" id="monthly-payment" disabled>   
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">Total Payment</span>
+                                <input type="number" class="form-control" id="total-payment" disabled>   
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-text">Total Interest</span>
+                                <input type="number" class="form-control" id="total-interest" disabled>   
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- Jquery -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- Popper js -->
+    <script src="js/popper.js"></script>
+
+    <!-- Boostrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- App js-->
+    <script src="js/app.js" type="text/javascript"></script>
+</body>
+</html>
